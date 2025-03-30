@@ -1,0 +1,8 @@
+@import "tailwindcss";
+.scrollbar-hide-user::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide-user {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
