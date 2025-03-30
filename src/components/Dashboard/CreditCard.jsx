@@ -36,7 +36,7 @@ const CreditCard = ({
           }`}
         >
           <img
-            src="/src/assets/cardIcon.png"
+            src="/cardIcon.png"
             className={`${isLight ? "invert" : ""}`}
             alt="card icon"
           />
