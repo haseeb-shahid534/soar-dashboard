@@ -14,8 +14,8 @@ const CreditCard = ({
       style={{ fontFamily: "Lato, sans-serif" }}
       className={`
       min-w-[280px] max-w-[300px] flex-shrink-0
-      lg:min-w-0 lg:max-w-none lg:flex-[1_1_45%]
-      h-[180px] sm:h-auto sm:aspect-[16/10]
+      lg:min-w-0 lg:max-w-none lg:flex-[1_1_38%]
+      h-[180px] sm:h-auto sm:aspect-[16/10] lg:aspect-[16/9]
       rounded-2xl shadow-xl p-4
       flex flex-col justify-between
       ${

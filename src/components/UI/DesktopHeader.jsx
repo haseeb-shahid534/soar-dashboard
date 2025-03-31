@@ -1,17 +1,11 @@
-import TaskSvg from "../../svg/task";
-
 const DesktopHeader = ({ user, title }) => (
   <header className="hidden md:flex justify-between items-center bg-white px-6 py-4 shadow">
     <div className="flex items-center gap-8">
-      <div className="flex items-center gap-2">
-        <TaskSvg />
-        <h1 className="text-xl font-bold text-[#2E3261]">Soar Task</h1>
-      </div>
       <h2 className="text-xl font-semibold text-[#2E3261]">{title}</h2>
     </div>
 
     <div className="flex items-center gap-4">
-      <div className="flex items-center bg-[#F5F7FA] rounded-full px-4 py-2">
+      <div className="flex items-center bg-[#F5F7FA] rounded-full px-4">
         <i className="fas fa-search text-[#8E98B3] mr-2"></i>
         <input
           type="text"

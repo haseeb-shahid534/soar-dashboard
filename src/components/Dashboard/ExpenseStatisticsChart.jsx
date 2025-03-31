@@ -73,8 +73,10 @@ const ExpenseStatisticsChart = ({ expenseStats }) => {
     <div className="h-full flex flex-col gap-4">
       <h4 className="font-bold">Monthly Expense</h4>
 
-      <div className="flex-1 rounded-2xl overflow-hidden bg-white p-3">
-        <Pie data={data} options={options} />;
+      <div className="flex-1 flex  items-center justify-center rounded-2xl overflow-hidden bg-white p-3">
+        <div style={{ height: "250px" }}>
+          <Pie data={data} options={options} />
+        </div>
       </div>
     </div>
   );

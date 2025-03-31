@@ -65,7 +65,9 @@ const WeeklyActivityChart = ({ data }) => {
             <p>Withdrawal</p>
           </div>
         </div>
-        <Bar data={barData} options={options} />
+        <div className="w-full weekly-chart-bar">
+          <Bar data={barData} options={options} />
+        </div>
       </div>
     </div>
   );

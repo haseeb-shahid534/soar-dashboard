@@ -83,8 +83,10 @@ const BalanceHistoryChart = ({ data }) => {
 
   return (
     <div className="p-4 bg-white rounded-2xl shadow">
-      <canvas ref={canvasRef} style={{ display: "none" }} />
-      {gradient && <Line data={chartData} options={chartOptions} />}
+      <div className="balance-history-chart">
+        <canvas ref={canvasRef} style={{ display: "none" }} />
+        {gradient && <Line data={chartData} options={chartOptions} />}
+      </div>
     </div>
   );
 };

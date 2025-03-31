@@ -6,3 +6,30 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.weekly-chart-bar,
+.balance-history-chart,
+.expense-chart {
+  width: 100% !important;
+  height: 280px !important;
+}
+
+.weekly-chart-bar canvas,
+.balance-history-chart canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 720px) {
+  .weekly-chart-bar,
+  .balance-history-chart {
+    height: 220px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .weekly-chart-bar,
+  .balance-history-chart {
+    height: 180px !important;
+  }
+}

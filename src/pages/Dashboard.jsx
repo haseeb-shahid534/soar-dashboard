@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { useSelector } from "react-redux";
-import { Line } from "react-chartjs-2";
 import "chart.js/auto";
 import CreditCard from "../components/Dashboard/CreditCard";
 
@@ -44,26 +43,29 @@ const Dashboard = () => {
     <div className="w-full p-4 space-y-6">
       {/* Row 1 */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 flex flex-col h-full">
           <div className="flex justify-between items-center mb-2">
             <h3 className="text-xl font-bold text-[#1e1e50]">My Cards</h3>
             <span className="text-sm text-[#1e1e50] cursor-pointer">
               See All
             </span>
           </div>
-          <div className="flex gap-4 overflow-x-auto scrollbar-hide">
+          <div className="flex gap-4 overflow-x-auto scrollbar-hide rounded-2xl p-3 h-full">
             {dashboardData.cards.map((card, index) => (
               <CreditCard key={index} index={index} {...card} />
             ))}
           </div>
         </div>
-        <div className="bg-white rounded-2xl p-3">
-          <h4 className="font-semibold mb-2 text-[#1e1e50] text-lg">
+
+        <div className="flex flex-col h-full">
+          <h4 className="font-semibold text-[#1e1e50] text-lg mb-2">
             Recent Transaction
           </h4>
-          {dashboardData.transactions.map((tx, i) => (
-            <TransactionItem {...tx} key={i} />
-          ))}
+          <div className="bg-white rounded-2xl p-3 flex-1">
+            {dashboardData.transactions.map((tx, i) => (
+              <TransactionItem {...tx} key={i} />
+            ))}
+          </div>
         </div>
       </div>
 
