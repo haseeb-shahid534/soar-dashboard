@@ -1,3 +1,5 @@
+import BellIcon from "../../svg/BellSvg";
+
 const DesktopHeader = ({ user, title }) => (
   <header className="hidden md:flex justify-between items-center bg-white px-6 py-4 shadow">
     <div className="flex items-center gap-8">
@@ -17,10 +19,7 @@ const DesktopHeader = ({ user, title }) => (
       <button className="bg-[#F5F7FA] flex items-center justify-center w-[50px] h-[50px] rounded-full text-[#2E3261]">
         <i className="fas fa-cog text-xl"></i>
       </button>
-      <button className="relative bg-[#F5F7FA] flex items-center justify-center w-[50px] h-[50px] rounded-full text-[#2E3261]">
-        <i className="fas fa-bell text-xl text-[#396AFF]"></i>
-        <span className="absolute top-2 right-2 w-2.5 h-2.5 border-2 border-[#396AFF] rounded-full"></span>
-      </button>
+      <BellIcon />
 
       <img
         src={user.profilePicture}

@@ -1,12 +1,21 @@
-const TransactionItem = ({ icon, title, date, amount, color }) => (
+import OtherDeposit from "../../svg/Other";
+import PaypalDeposit from "../../svg/PayPal";
+import DepositSvg from "../../svg/CardDeposit";
+
+const getIcon = (type) => {
+  const data = {
+    Card: <DepositSvg />,
+    PayPal: <OtherDeposit />,
+    Other: <PaypalDeposit />,
+  };
+
+  return data[type];
+};
+
+const TransactionItem = ({ title, date, amount, type }) => (
   <div className="flex items-center justify-between py-3">
     <div className="flex items-center gap-3">
-      <div
-        className="w-10 h-10 rounded-full flex items-center justify-center text-white text-lg font-bold"
-        style={{ backgroundColor: color || "#ddd" }}
-      >
-        <img src={icon} alt={title} className="w-6 h-6" />
-      </div>
+      {getIcon(type)}
       <div>
         <p className="text-sm font-medium text-gray-900">{title}</p>
         <p className="text-xs text-gray-500">{date}</p>

@@ -1,4 +1,6 @@
 import React from "react";
+import CircleWhite from "../../svg/CircleWhite";
+import CircleBlack from "../../svg/CircleBlack";
 
 const CreditCard = ({
   balance = "5,756",
@@ -78,18 +80,7 @@ const CreditCard = ({
         >
           {cardNumber}
         </div>
-        <div className="relative w-[60px] h-[30px] ml-2">
-          <span
-            className={`absolute left-0 w-[30px] h-[30px] rounded-full ${
-              isLight ? "bg-gray-400" : "bg-gray-400 opacity-70"
-            }`}
-          />
-          <span
-            className={`absolute left-[15px] w-[30px] h-[30px] rounded-full ${
-              isLight ? "bg-gray-300" : "bg-gray-300 opacity-70"
-            }`}
-          />
-        </div>
+        {isLight ? <CircleWhite /> : <CircleBlack />}
       </div>
     </div>
   );
