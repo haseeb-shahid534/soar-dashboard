@@ -4,7 +4,7 @@ A modern and responsive dashboard built with React and Vite. This dashboard visu
 
 ## 🚀 Live Demo
 
-👉 [View on Vercel](https://your-vercel-demo-link.vercel.app)  
+👉 [View on Vercel](https://soar-dashboard-delta.vercel.app/)  
 _Replace with your actual Vercel deployment URL._
 
 ## 🛠️ Local Setup Instructions
